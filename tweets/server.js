@@ -13,6 +13,7 @@ var fs = require("fs"),
     io = require('socket.io').listen(server);
     
     server.listen(port);
+	app.use(express.static(__dirname + '/public'));
 // on affiche le port du serveur
 console.log('Nous sommes en ecoute sur le port  ' + port);
 

@@ -1,0 +1,19 @@
+	body {
+		background-image: url('https://abs.twimg.com/images/themes/theme6/bg.gif') ;
+		background-position: left 40px;
+		background-repeat: no-repeat;
+		background-color: #709397;
+	}
+
+	section {
+background-color: rgba(189, 195, 199,1.0);
+width: 1000px;
+height: auto;
+border-radius: 25px;
+-webkit-border-radius: 25px;
+	}
+	#lestweets {
+
+		padding-left: 40px;
+		margin-left: 40px;
+	}
