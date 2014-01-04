@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Les derniers tweets sur Node.js</title>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+
+	<body>
+<!--On ajoute un peu de style !-->
+<style type="text/css">
+	body {
+		background-image: url('https://abs.twimg.com/images/themes/theme6/bg.gif') ;
+		background-position: left 40px;
+		background-repeat: no-repeat;
+		background-color: #709397;
+	}
+
+	section {
+background-color: rgba(189, 195, 199,1.0);
+width: 1000px;
+height: auto;
+border-radius: 25px;
+-webkit-border-radius: 25px;
+	}
+	#lestweets {
+
+		padding-left: 40px;
+		margin-left: 40px;
+	}
+
+</style>
+		<h1>Les derniers tweets sur Node.js</h1>
+
+<script>
+		//Se connecter au serveur
+        var io = io.connect('http://localhost');
+        // Ecouter l'evénement stream
+        io.on('stream', function(tweet){
+        	//On insère les tweets en utilisant Jquery
+       $('#lestweets').append('<li><h3>'+tweet+'<br>');
+
+        });
+</script>
+	<section>
+	 <div id="lestweets"></div>
+</section>
+	</body>
+</html>
