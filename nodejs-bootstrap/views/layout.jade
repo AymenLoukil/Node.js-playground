@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+
+ body
+    block content
+    .navbar.navbar-inverse.navbar-fixed-top
+        .container
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='#') Notre logo
+            .collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a(href='#') Accueil
+                    li
+                        a(href='#about') A propos
+                    li
+                        a(href='#contact') Contact
+
+    form.form-signin
+        h2.form-signin-heading Formulaire d'authentification
+        input.form-control(type='text', placeholder='Email address', autofocus='autofocus')
+        input.form-control(type='password', placeholder='Password')
+        label.checkbox
+          input(type='checkbox', value='remember-me')
+          | Se souvenir de moi
+        button.btn.btn-lg.btn-primary.btn-block(type='submit') Connecter
+    
