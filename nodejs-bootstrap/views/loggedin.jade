@@ -1,0 +1,9 @@
+extends layout
+block content
+	div.container
+	div.content
+			h2 Bonjour #{user.name} !
+			img(src= "https://graph.facebook.com/"+ user.nameP + "/picture?width=200&height=200")
+			h2 E-mail : #{user.email}
+			a(href="/logout") Logout
+				
